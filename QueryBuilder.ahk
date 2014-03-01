@@ -110,7 +110,7 @@ IfWinExist Radian6 Dashboard
 	Loop
 	{
 		; File being parsed
-	    FileReadLine, line, C:\Users\Ash-Lenovo\Desktop\AutoHotKey\test.txt, %A_Index%
+	    FileReadLine, line, C:\Users\Ash-Lenovo\Desktop\Radian6_Automation\test.txt, %A_Index%
 	    if ErrorLevel
 	        break
 	    ;MsgBox, 4, , Line #%A_Index% is "%line%".  Continue?
