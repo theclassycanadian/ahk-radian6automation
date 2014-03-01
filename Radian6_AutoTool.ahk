@@ -610,11 +610,11 @@ ReportAutoDownload()
 				}
 			}
 		}
-		MsgBox, Report Download Automation has completed!
+		logStatus("C", "ReportAutoDownload", "")
 	}
 	else
 	{
-		logStatus("C", "ReportAutoDownload", "")
+		logStatus("E", "ReportAutoDownload", "Radian6 Dashbord not found")
 		return
 	}
 }
