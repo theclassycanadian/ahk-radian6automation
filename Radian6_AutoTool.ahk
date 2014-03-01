@@ -479,6 +479,8 @@ queryBuilder()
 
 ReportAutoDownload()
 {
+	; Get X value of the screen resolution
+	SysGet, screenRes, 0, 1
 	IfWinExist Radian6 Dashboard
 	{
 		WinActivate, Radian6 Dashboard
@@ -505,12 +507,18 @@ ReportAutoDownload()
 		Loop
 		{
 			Sleep 500
-			PixelGetColor, singleDownload, 583, 453
+			if (screenRes == 1366)
+				PixelGetColor, singleDownload, 583, 453
+			else if (screenRes == 1364)
+				PixelGetColor, singleDownload, 583, 452
 
 			; Wait until the report is completed loading
 			Loop
 			{
-				PixelGetColor, pixCol, 557, 416
+				if (screenRes == 1366)
+					PixelGetColor, pixCol, 557, 416
+				else if (screenRes == 1364)
+					PixelGetColor, pixCol, 557, 415
 				if (pixCol = "0xFFFFFF")
 				{
 					Sleep 1000
@@ -537,7 +545,10 @@ ReportAutoDownload()
 			; Wait until the report is completely downloaded
 			Loop
 			{
-				PixelGetColor, pixCol, 832, 430
+				if (screenRes == 1366)
+					PixelGetColor, pixCol, 832, 430
+				else if (screenRes == 1364)
+					PixelGetColor, pixCol, 832, 429
 				if (pixCol = "0xEFEFEF")
 				{
 					Sleep 1000
@@ -551,7 +562,10 @@ ReportAutoDownload()
 		}
 		
 
-		PixelGetColor, singleDownload, 583, 453
+		if (screenRes == 1366)
+			PixelGetColor, singleDownload, 583, 453
+		else if (screenRes == 1364)
+			PixelGetColor, singleDownload, 583, 452
 		if (singleDownload != "0xFFFFFF")
 		{
 			; This is for other downloads afterwards
@@ -559,7 +573,12 @@ ReportAutoDownload()
 			{
 				; Check if button color is disabled or enabled
 				WinActivate, Radian6 Dashboard
-				PixelGetColor, buttonCol, 598, 453
+
+				if (screenRes == 1366)
+					PixelGetColor, buttonCol, 598, 453
+				else if (screenRes == 1364)
+					PixelGetColor, buttonCol, 598, 452
+				
 				if (buttonCol = "0x727272")
 				{
 					Loop
@@ -570,7 +589,11 @@ ReportAutoDownload()
 						; Wait until the report is completed loading
 						Loop
 						{
-							PixelGetColor, pixCol, 557, 416
+							if (screenRes == 1366)
+								PixelGetColor, pixCol, 557, 416
+							else if (screenRes == 1364)
+								PixelGetColor, pixCol, 557, 415
+							
 							if (pixCol = "0xFFFFFF")
 							{
 								Sleep 1000
@@ -591,7 +614,11 @@ ReportAutoDownload()
 						; Wait until the report is completely downloaded
 						Loop
 						{
-							PixelGetColor, pixCol, 832, 430
+							if (screenRes == 1366)
+								PixelGetColor, pixCol, 832, 430
+							else if (screenRes == 1364)
+								PixelGetColor, pixCol, 832, 429
+								
 							if (pixCol = "0xF3F3F3")
 							{
 								Sleep 1000
@@ -651,6 +678,7 @@ logStatus(statusType, scriptType, errorMessage)
 ; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
 ; ;-------------------------------------------------------------------------
 ; ^!m::
-; PixelGetColor, xxyyzz, 583, 453
-; Msgbox, Color is "%xxyyzz%"
-; return
+; PixelGetColor, xxyyzz, 832, 430
+; PixelGetColor, xxyyzz2, 832, 429
+; Msgbox, Color is "%xxyyzz%" at 832, 430
+; Msgbox, Color is "%xxyyzz2%" at 832, 429
