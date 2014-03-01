@@ -6,7 +6,7 @@ KG|A|Keyword Group 1
 KG|A|Keyword Group 2
 KG|A|Keyword Group 3
 K1|A|single keyword 3|3
-K1|A|keyword Prox 4|4|C|another Prox 4|4|C|Yet Another word Prox 4|4
+K1|A|keyword Prox 4|4|C|asdasdasd|4|C|Yet Another word Prox 4|4
 K1|A|single keyword 4|4
 K1|A|keyword Prox 5|5|C|another Prox 5|5|C|Yet Another word Prox 5|5
 K1|A|single keyword 5|5
@@ -125,3 +125,7 @@ K2|A|Second keyword 25
 K2|A|Second keyword 26
 K2|A|Second keyword 27
 KG|A|Keyword Group 92
+KG|D|All
+KX|D|All
+K2|D|All
+K1|D|All

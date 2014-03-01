@@ -1,7 +1,7 @@
 ;----------------------------------------
-;- Escappe will trigger a script reload -
+;- F1 will trigger a script reload -
 ;----------------------------------------
-Escape::
+F1::
 	Reload
 	Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
 	MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
@@ -20,6 +20,10 @@ return
 ^!+r::
 	ReportAutoDownload()
 return
+
+; Global Variables Declaration
+; errorFlag = 0
+; End of Global Variables Declaration
 
 setProximity(proximityNumber, commandName)
 {
@@ -110,13 +114,14 @@ setProximity(proximityNumber, commandName)
 
 queryBuilder()
 {
+	errorFlag = 0
 	IfWinExist Radian6 Dashboard
 	{
 		WinActivate, Radian6 Dashboard
 		PixelGetColor, browserType, 15, 15
 		if (browserType != "0x3291E9")
 		{
-			MsgBox Browser is not Firefox, script is closing...
+			logStatus("E", "QueryBuilder", "Firefox browser not found")
 			return
 		}
 
@@ -126,15 +131,17 @@ queryBuilder()
 		Loop
 		{
 			; File being parsed
+			IfNotExist, query_file\query_file.txt
+			{
+				logStatus("E", "QueryBuilder", "query_file.txt could not be found")
+				errorFlag = 1
+				return
+			}
+
 		    FileReadLine, line, query_file\query_file.txt, %A_Index%
 		    if ErrorLevel
 		    {
-
 		    	break
-		    }
-		    IfMsgBox, No
-		    {
-		    	return
 		    }
 		    
 		    categoryContainer := ""
@@ -186,6 +193,12 @@ queryBuilder()
 							initializeScreen := "KXI"
 						}
 					}
+					else
+					{
+						logStatus("E", "QueryBuilder", "Unknown category found under [Category Container]")
+						errorFlag = 1
+						return
+					}
 				}
 				else
 				{
@@ -199,6 +212,12 @@ queryBuilder()
 								commandContainer := "Add"
 							else if (A_LoopField == "D")
 								commandContainer := "Delete"
+							else
+							{
+								logStatus("E", "QueryBuilder", "Unknown command found under [Command Container]")
+								errorFlag = 1
+								return
+							}
 						}
 						else if (A_Index == "3")
 						{
@@ -228,12 +247,11 @@ queryBuilder()
 							{
 								if (A_LoopField == "All")
 								{
-									;Send {Click 345, 637} 				; Select "Keywords and Keywords Group"
-									;Send {Click 1333, 609} 			; Lower the scroll bar on the right of the screen
-
 									deletePending = 1
 									while (deletePending = 1)
 									{
+										Send {Click 1333, 609}
+										Sleep 50
 										PixelGetColor, deleteStatus, 439, 608
 										if (deleteStatus == "0x727272")
 										{
@@ -243,8 +261,21 @@ queryBuilder()
 											Sleep 500
 										}
 										else
-											deletePending = 0
+										{
+											Send {Click 1333, 308}		; Move scroll bar up
+											Send {Click 471, 403}		; Click on the second row of the KG if something exists
+											PixelGetColor, deleteStatus2, 471, 403
+											if (deleteStatus2 == "0xFFFFFF")
+												deletePending = 0
+										}
+											
 									}
+								}
+								else 
+								{
+									logStatus("E", "QueryBuilder", "Command parameter for delete is incorrect")
+									errorFlag = 1
+									return
 								}
 							}
 						}
@@ -262,6 +293,12 @@ queryBuilder()
 								commandContainer := "Delete"
 							else if (A_LoopField == "C")
 								commandContainer := "Concat"
+							else
+							{
+								logStatus("E", "QueryBuilder", "Unknown command found under [Command Container]")
+								errorFlag = 1
+								return
+							}
 						}
 						else if (keywordStep == 1)
 						{
@@ -286,6 +323,12 @@ queryBuilder()
 										Send {Click 941, 440} 			; Click the topmost row
 										PixelGetColor, deletePending, 941, 440
 									}
+								}
+								else 
+								{
+									logStatus("E", "QueryBuilder", "Command parameter for delete is incorrect")
+									errorFlag = 1
+									return
 								}
 							}
 							else if (commandContainer == "Concat")
@@ -316,6 +359,12 @@ queryBuilder()
 								commandContainer := "Add"
 							else if (A_LoopField == "D")
 								commandContainer := "Delete"
+							else
+							{
+								logStatus("E", "QueryBuilder", "Unknown command found under [Command Container]")
+								errorFlag = 1
+								return
+							}
 						}
 						else if (A_Index == "3")
 						{
@@ -345,6 +394,12 @@ queryBuilder()
 										PixelGetColor, deletePending, 940, 374
 									}
 								}
+								else 
+								{
+									logStatus("E", "QueryBuilder", "Command parameter for delete is incorrect")
+									errorFlag = 1
+									return
+								}
 							}
 						}
 					}
@@ -358,6 +413,12 @@ queryBuilder()
 								commandContainer := "Add"
 							else if (A_LoopField == "D")
 								commandContainer := "Delete"
+							else
+							{
+								logStatus("E", "QueryBuilder", "Unknown command found under [Command Container]")
+								errorFlag = 1
+								return
+							}
 						}
 						else if (A_Index == "3")
 						{
@@ -388,6 +449,12 @@ queryBuilder()
 										PixelGetColor, deletePending, 940, 526
 									}
 								}
+								else 
+								{
+									logStatus("E", "QueryBuilder", "Command parameter for delete is incorrect")
+									errorFlag = 1
+									return
+								}
 							}
 						}
 					}
@@ -399,7 +466,13 @@ queryBuilder()
 				Send {Click 1120, 660} 									; Click "Done" button
 			}
 		}
-		MsgBox, Query Generation has been completed!
+		if (errorFlag == 0)
+			logStatus("C", "QueryBuilder", "")
+		return
+	}
+	else
+	{
+		logStatus("E", "QueryBuilder", "Radian6 Dashbord not found")
 		return
 	}
 }
@@ -409,6 +482,14 @@ ReportAutoDownload()
 	IfWinExist Radian6 Dashboard
 	{
 		WinActivate, Radian6 Dashboard
+		PixelGetColor, browserType, 15, 15
+		if (browserType != "0x3291E9")
+		{
+
+			logStatus("E", "ReportAutoDownload", "Firefox browser not found")
+			return
+		}
+
 		Send {Click 673, 350} 	; Click "Gear" button on a widget
 		Sleep 500
 		Send {Click 592, 423} 	; Click "Export Report"
@@ -531,20 +612,45 @@ ReportAutoDownload()
 		}
 		MsgBox, Report Download Automation has completed!
 	}
+	else
+	{
+		logStatus("C", "ReportAutoDownload", "")
+		return
+	}
 }
 
-;-------------------------------------------------------------------------
-; The following CTRL + ALT + LeftClick returns the cursor position
-^!LButton::
-	MouseGetPos, xpos, ypos 
-	PixelGetColor, buttonColor, xpos, ypos 
-	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
-return
+logStatus(statusType, scriptType, errorMessage)
+{
+	; Items to be appended to the error.log file are:
+	; [statusType]|[scriptType]|[errorMessage|[timestamp]
+	; [statusType] - either "C" (completed) or "E" (error)
+	; [scriptType] - either "QueryBuilder" or "ReportAutoDownload"
+	; [errorMessage] - error message from the calling class/method/keystroke
+	; [timestamp] - format is yyyy-mm-dd hh-mm-ss
 
-;550, 473
-;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
-;-------------------------------------------------------------------------
-^!m::
-PixelGetColor, xxyyzz, 583, 453
-Msgbox, Color is "%xxyyzz%"
-return
+	FormatTime, TimeString
+	FormatTime, TimeStringF, TimeString, yyyy-MM-dd HH:mm:ss
+	FileAppend, %statusType%|%scriptType%|%errorMessage%|%TimeStringF%`n, error.log
+	if (statusType == "E")
+		MsgBox %scriptType% - Error: %errorMessage% - %TimeStringF%
+	else if (statusType == "C")
+		MsgBox %scriptType% - Completed - %TimeStringF%
+}
+
+
+; ; Debugging code
+; ;-------------------------------------------------------------------------
+; ; The following CTRL + ALT + LeftClick returns the cursor position and pixel color
+; ^!LButton::
+; 	MouseGetPos, xpos, ypos 
+; 	PixelGetColor, buttonColor, xpos, ypos 
+; 	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
+; return
+
+; ;550, 473
+; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
+; ;-------------------------------------------------------------------------
+; ^!m::
+; PixelGetColor, xxyyzz, 583, 453
+; Msgbox, Color is "%xxyyzz%"
+; return
