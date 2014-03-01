@@ -648,7 +648,7 @@ ReportAutoDownload()
 
 logStatus(statusType, scriptType, errorMessage)
 {
-	; Items to be appended to the error.log file are:
+	; Items to be appended to the status.log file are:
 	; [statusType]|[scriptType]|[errorMessage|[timestamp]
 	; [statusType] - either "C" (completed) or "E" (error)
 	; [scriptType] - either "QueryBuilder" or "ReportAutoDownload"
@@ -657,7 +657,7 @@ logStatus(statusType, scriptType, errorMessage)
 
 	FormatTime, TimeString
 	FormatTime, TimeStringF, TimeString, yyyy-MM-dd HH:mm:ss
-	FileAppend, %statusType%|%scriptType%|%errorMessage%|%TimeStringF%`n, error.log
+	FileAppend, %statusType%|%scriptType%|%errorMessage%|%TimeStringF%`n, status.log
 	if (statusType == "E")
 		MsgBox %scriptType% - Error: %errorMessage% - %TimeStringF%
 	else if (statusType == "C")
