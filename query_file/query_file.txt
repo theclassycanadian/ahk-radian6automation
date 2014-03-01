@@ -125,7 +125,3 @@ K2|A|Second keyword 25
 K2|A|Second keyword 26
 K2|A|Second keyword 27
 KG|A|Keyword Group 92
-KG|D|All
-KX|D|All
-K2|D|All
-K1|D|All
