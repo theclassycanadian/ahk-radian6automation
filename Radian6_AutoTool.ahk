@@ -526,8 +526,6 @@ queryBuilder()
 
 ReportAutoDownload()
 {
-	; Get X value of the screen resolution
-	SysGet, screenRes, 0, 1
 	IfWinExist Radian6 Dashboard
 	{
 		WinActivate, Radian6 Dashboard
@@ -543,29 +541,24 @@ ReportAutoDownload()
 		Sleep 500
 		Send {Click 592, 423} 	; Click "Export Report"
 		Sleep 500
-		Send {Click 712, 230} 	; Click "Format" drop down list
+		Send {Click 869, 371} 	; Click "Format" drop down list
 		Send {Down 5}			; and selected CSV from the drop down list
 		Send {ENTER}
 		Sleep 500
-		Send {Click 798, 349} ; Click "Download" button
+		Send {Click 952, 493}	; Click "Download" button
 		Sleep 500
 		
 		; This is the initial download
 		Loop
 		{
+			; Check if the "Download Next 10000" button appears
 			Sleep 500
-			if (screenRes == 1366)
-				PixelGetColor, singleDownload, 583, 453
-			else if (screenRes == 1364)
-				PixelGetColor, singleDownload, 583, 452
+			PixelGetColor, singleDownload, 758, 594
 
 			; Wait until the report is completed loading
 			Loop
 			{
-				if (screenRes == 1366)
-					PixelGetColor, pixCol, 557, 416
-				else if (screenRes == 1364)
-					PixelGetColor, pixCol, 557, 415
+				PixelGetColor, pixCol, 716, 588
 				if (pixCol = "0xFFFFFF")
 				{
 					Sleep 1000
@@ -578,9 +571,9 @@ ReportAutoDownload()
 			
 			
 			if (singleDownload = "0x949494")
-				Send {Click 660, 453}	; Click "OK" button
+				Send {Click 820, 593}	; Click "OK" button
 			else if (singleDownload = "0xFFFFFF")
-				Send {Click 660, 433}	; Click "OK" button
+				Send {Click 820, 573}	; Click "OK" button
 
 			Sleep 500
 			Send {Click 55, 140}	; Click "Desktop" under "Save As" window
@@ -592,15 +585,12 @@ ReportAutoDownload()
 			; Wait until the report is completely downloaded
 			Loop
 			{
-				if (screenRes == 1366)
-					PixelGetColor, pixCol, 832, 430
-				else if (screenRes == 1364)
-					PixelGetColor, pixCol, 832, 429
-				if (pixCol = "0xEFEFEF")
+				PixelGetColor, pixCol, 987, 574
+				if (pixCol = "0xF3F3F3")
 				{
 					Sleep 1000
 				}
-				else if (pixCol = "0x4D88FF")
+				else if (pixCol = "0x3E7EFF")
 				{
 					Break
 				}
@@ -609,10 +599,9 @@ ReportAutoDownload()
 		}
 		
 
-		if (screenRes == 1366)
-			PixelGetColor, singleDownload, 583, 453
-		else if (screenRes == 1364)
-			PixelGetColor, singleDownload, 583, 452
+		; Check if the report contains less than 10,000 records (by checking if button exists)
+		PixelGetColor, singleDownload, 758, 594
+
 		if (singleDownload != "0xFFFFFF")
 		{
 			; This is for other downloads afterwards
@@ -620,26 +609,20 @@ ReportAutoDownload()
 			{
 				; Check if button color is disabled or enabled
 				WinActivate, Radian6 Dashboard
-
-				if (screenRes == 1366)
-					PixelGetColor, buttonCol, 598, 453
-				else if (screenRes == 1364)
-					PixelGetColor, buttonCol, 598, 452
+				PixelGetColor, buttonCol, 758, 594
 				
+
 				if (buttonCol = "0x727272")
 				{
 					Loop
 					{
-						Send {Click 606, 460}	; Click "Download Items" button
+						Send {Click 765, 602}	; Click "Download Items" button
 						Sleep 500
 						
 						; Wait until the report is completed loading
 						Loop
 						{
-							if (screenRes == 1366)
-								PixelGetColor, pixCol, 557, 416
-							else if (screenRes == 1364)
-								PixelGetColor, pixCol, 557, 415
+							PixelGetColor, pixCol, 716, 588
 							
 							if (pixCol = "0xFFFFFF")
 							{
@@ -651,7 +634,7 @@ ReportAutoDownload()
 							}
 						}
 						
-						Send {Click 660, 453}	; Click "OK" button
+						Send {Click 820, 593}	; Click "OK" button
 						Sleep 500
 						Send {Click 55, 140}	; Click "Desktop" under "Save As" window
 						Sleep 500
@@ -661,16 +644,13 @@ ReportAutoDownload()
 						; Wait until the report is completely downloaded
 						Loop
 						{
-							if (screenRes == 1366)
-								PixelGetColor, pixCol, 832, 430
-							else if (screenRes == 1364)
-								PixelGetColor, pixCol, 832, 429
+							PixelGetColor, pixCol, 987, 574
 								
 							if (pixCol = "0xF3F3F3")
 							{
 								Sleep 1000
 							}
-							else if (pixCol = "0x4D88FF")
+							else if (pixCol = "0x3E7EFF")
 							{
 								Break
 							}
@@ -715,23 +695,25 @@ logStatus(statusType, scriptType, errorMessage)
 ; ; Debugging code
 ; ;-------------------------------------------------------------------------
 ; ; The following CTRL + ALT + LeftClick returns the cursor position and pixel color
-^!LButton::
-	MouseGetPos, xpos, ypos 
-	PixelGetColor, buttonColor, xpos, ypos 
-	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
-return
+; ^!LButton::
+; 	MouseGetPos, xpos, ypos 
+; 	PixelGetColor, buttonColor, xpos, ypos 
+; 	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
+; return
 
-; ;550, 473
-; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
-; ;-------------------------------------------------------------------------
-^!m::
-; PixelGetColor, xxyyzz, 445, 827
-; PixelGetColor, xxyyzz2, 445, 828
-; PixelGetColor, xxyyzz3, 445, 829
-; PixelGetColor, xxyyzz4, 445, 826
-; Msgbox, Color is "%xxyyzz%" at 445, 827
-; Msgbox, Color is "%xxyyzz2%" at 445, 828
-; Msgbox, Color is "%xxyyzz3%" at 445, 829
-; Msgbox, Color is "%xxyyzz4%" at 445, 826
-;MouseMove, 1280, 348
-return
+; ; ;550, 473
+; ; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
+; ; ;-------------------------------------------------------------------------
+; ^!m::
+; ; PixelGetColor, xxyyzz, 987, 574
+; ; PixelGetColor, xxyyzz2, 758, 594
+; ; PixelGetColor, xxyyzz3, 758, 595
+; ; PixelGetColor, xxyyzz4, 758, 596
+; ; Msgbox, Color is "%xxyyzz%" at 987, 574
+; ; Msgbox, Color is "%xxyyzz2%" at 758, 594
+; ; Msgbox, Color is "%xxyyzz3%" at 758, 595
+; ; Msgbox, Color is "%xxyyzz4%" at 758, 596
+; ; MouseMove, 55, 140
+; ; Sleep 1000
+; ; MouseMove, 522, 368
+; return
