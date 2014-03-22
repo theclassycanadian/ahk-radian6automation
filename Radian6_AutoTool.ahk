@@ -25,91 +25,135 @@ return
 ; errorFlag = 0
 ; End of Global Variables Declaration
 
-setProximity(proximityNumber, commandName)
+setProximity(proximityNumber, commandName, concatCount)
 {
+	; If the amount of "C" is more than 2, then force the proximity slider to use "Concat2"
+	if (concatCount > 2)
+		commandName := "Concat2"
+
 	if (proximityNumber == 1 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 811, 385
+		MouseClickDrag, Left, 958, 512, 967, 512
 	else if (proximityNumber == 1 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 811, 488
+		MouseClickDrag, Left, 958, 615, 967, 615
 	else if (proximityNumber == 2 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 822, 385
+		MouseClickDrag, Left, 958, 512, 975, 512
 	else if (proximityNumber == 2 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 822, 488
+		MouseClickDrag, Left, 958, 615, 975, 615
 	else if (proximityNumber == 3 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 829, 385
+		MouseClickDrag, Left, 958, 512, 984, 512
 	else if (proximityNumber == 3 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 829, 488
+		MouseClickDrag, Left, 958, 615, 984, 615
 	else if (proximityNumber == 4 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 835, 385
+		MouseClickDrag, Left, 958, 512, 992, 512
 	else if (proximityNumber == 4 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 835, 488
+		MouseClickDrag, Left, 958, 615, 992, 615
 	else if (proximityNumber == 5 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 844, 385
+		MouseClickDrag, Left, 958, 512, 1001, 512
 	else if (proximityNumber == 5 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 844, 488
+		MouseClickDrag, Left, 958, 615, 1001, 615
 	else if (proximityNumber == 6 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 853, 385
+		MouseClickDrag, Left, 958, 512, 1010, 512
 	else if (proximityNumber == 6 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 853, 488
+		MouseClickDrag, Left, 958, 615, 1010, 615
 	else if (proximityNumber == 7 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 862, 385
+		MouseClickDrag, Left, 958, 512, 1019, 512
 	else if (proximityNumber == 7 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 862, 488
+		MouseClickDrag, Left, 958, 615, 1019, 615
 	else if (proximityNumber == 8 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 870, 385
+		MouseClickDrag, Left, 958, 512, 1027, 512
 	else if (proximityNumber == 8 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 870, 488
+		MouseClickDrag, Left, 958, 615, 1027, 615
 	else if (proximityNumber == 9 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 879, 385
+		MouseClickDrag, Left, 958, 512, 1036, 512
 	else if (proximityNumber == 9 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 879, 488
+		MouseClickDrag, Left, 958, 615, 1036, 615
 	else if (proximityNumber == 10 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 888, 385
+		MouseClickDrag, Left, 958, 512, 1044, 512
 	else if (proximityNumber == 10 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 888, 488
+		MouseClickDrag, Left, 958, 615, 1044, 615
 	else if (proximityNumber == 11 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 895, 385
+		MouseClickDrag, Left, 958, 512, 1052, 512
 	else if (proximityNumber == 11 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 895, 488
+		MouseClickDrag, Left, 958, 615, 1052, 615
 	else if (proximityNumber == 12 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 905, 385
+		MouseClickDrag, Left, 958, 512, 1061, 512
 	else if (proximityNumber == 12 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 905, 488
+		MouseClickDrag, Left, 958, 615, 1061, 615
 	else if (proximityNumber == 13 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 913, 385
+		MouseClickDrag, Left, 958, 512, 1069, 512
 	else if (proximityNumber == 13 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 913, 488
+		MouseClickDrag, Left, 958, 615, 1069, 615
 	else if (proximityNumber == 14 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 922, 385
+		MouseClickDrag, Left, 958, 512, 1078, 512
 	else if (proximityNumber == 14 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 922, 488
+		MouseClickDrag, Left, 958, 615, 1078, 615
 	else if (proximityNumber == 15 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 930, 385
+		MouseClickDrag, Left, 958, 512, 1087, 512
 	else if (proximityNumber == 15 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 930, 488
+		MouseClickDrag, Left, 958, 615, 1087, 615
 	else if (proximityNumber == 16 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 938, 385
+		MouseClickDrag, Left, 958, 512, 1095, 512
 	else if (proximityNumber == 16 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 938, 488
+		MouseClickDrag, Left, 958, 615, 1095, 615
 	else if (proximityNumber == 17 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 947, 385
+		MouseClickDrag, Left, 958, 512, 1104, 512
 	else if (proximityNumber == 17 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 947, 488
+		MouseClickDrag, Left, 958, 615, 1104, 615
 	else if (proximityNumber == 18 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 956, 385
+		MouseClickDrag, Left, 958, 512, 1113, 512
 	else if (proximityNumber == 18 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 956, 488
+		MouseClickDrag, Left, 958, 615, 1113, 615
 	else if (proximityNumber == 19 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 963, 385
+		MouseClickDrag, Left, 958, 512, 1120, 512
 	else if (proximityNumber == 19 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 963, 488
+		MouseClickDrag, Left, 958, 615, 1120, 615
 	else if (proximityNumber == 20 && commandName == "Add")
-		MouseClickDrag, Left, 801, 385, 974, 385
+		MouseClickDrag, Left, 958, 512, 1130, 512
 	else if (proximityNumber == 20 && commandName == "Concat")
-		MouseClickDrag, Left, 801, 488, 974, 488
+		MouseClickDrag, Left, 958, 615, 1130, 615
+	else if (proximityNumber == 1 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 967, 519
+	else if (proximityNumber == 2 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 975, 519
+	else if (proximityNumber == 3 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 984, 519
+	else if (proximityNumber == 4 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 992, 519
+	else if (proximityNumber == 5 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1001, 519
+	else if (proximityNumber == 6 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1010, 519
+	else if (proximityNumber == 7 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1019, 519
+	else if (proximityNumber == 8 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1027, 519
+	else if (proximityNumber == 9 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1036, 519
+	else if (proximityNumber == 10 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1044, 519
+	else if (proximityNumber == 11 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1052, 519
+	else if (proximityNumber == 12 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1061, 519
+	else if (proximityNumber == 13 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1069, 519
+	else if (proximityNumber == 14 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1078, 519
+	else if (proximityNumber == 15 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1087, 519
+	else if (proximityNumber == 16 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1095, 519
+	else if (proximityNumber == 17 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1104, 519
+	else if (proximityNumber == 18 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1113, 519
+	else if (proximityNumber == 19 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1120, 519
+	else if (proximityNumber == 20 && commandName == "Concat2")
+		MouseClickDrag, Left, 958, 519, 1130, 519
 
 	if (proximityNumber != 0 && commandName == "Concat")
-		Send {Click 950, 341} 				; Click back to the first keyword
+		Send {Click 1248, 468} 				; Click back to the first keyword
 }
 
 queryBuilder()
@@ -147,6 +191,7 @@ queryBuilder()
 		    categoryContainer := ""
 		    commandContainer := ""
 		    keywordStep = 0
+		    concatCount = 0
 			Loop, parse, line, |
 			{
 				; Set Category Container
@@ -157,8 +202,8 @@ queryBuilder()
 						categoryContainer := "KG"
 						if (initializeScreen != "KGI")
 						{
-							Send {Click 345, 637} 						; Select "Keywords and Keywords Group"
-							Send {Click 1333, 609} 						; Lower the scroll bar on the right of the screen
+							Send {Click 329, 916} 						; Select "Keywords and Keywords Group"
+							Send {Click 410, 332}						; Select "Advanced features" radio button
 							initializeScreen := "KGI"
 						}
 					}
@@ -168,8 +213,8 @@ queryBuilder()
 						keywordStep = 0
 						if (initializeScreen != "K1I")
 						{
-							Send {Click 345, 637} 						; Select "Keywords and Keywords Group"
-							Send {Click 1333, 308} 						; Bring up the scroll bar on the right of the screen
+							Send {Click 329, 916} 						; Select "Keywords and Keywords Group"
+							Send {Click 410, 332}						; Select "Advanced features" radio button
 							initializeScreen := "K1I"
 						}
 					}
@@ -178,8 +223,8 @@ queryBuilder()
 						categoryContainer := "K2"
 						if (initializeScreen != "K2I")
 						{
-							Send {Click 345, 637} 						; Select "Keywords and Keywords Group"
-							Send {Click 1333, 609} 						; Lower the scroll bar on the right of the screen
+							Send {Click 329, 916} 						; Select "Keywords and Keywords Group"
+							Send {Click 410, 332}						; Select "Advanced features" radio button
 							initializeScreen := "K2I"
 						}
 					}
@@ -188,8 +233,8 @@ queryBuilder()
 						categoryContainer := "KX"
 						if (initializeScreen != "KXI")
 						{
-							Send {Click 345, 637} 						; Select "Keywords and Keywords Group"
-							Send {Click 1333, 609} 						; Lower the scroll bar on the right of the screen
+							Send {Click 329, 916} 						; Select "Keywords and Keywords Group"
+							Send {Click 410, 332}						; Select "Advanced features" radio button
 							initializeScreen := "KXI"
 						}
 					}
@@ -225,15 +270,15 @@ queryBuilder()
 							{
 								if (keywordGroupFirstEntry == 0)
 								{
-									Send {Click 394, 617} 				; Click "Edit" button
+									Send {Click 394, 835} 				; Click "Edit" button
 									keywordGroupFirstEntry = 1
 								}
 								else
-									Send {Click 343, 617} 				; Click "Add" button
+									Send {Click 343, 836} 				; Click "Add" button
 
 								Send {Backspace}						; Delete template name
 								Send %A_LoopField%						; Enter the name of the Keyword Group
-								Send {Click 968, 501} 					; Click "Done" button
+								Send {Enter} 							; Press "Enter" key
 
 								; Wait until screen is finished loading
 								addStatus := ""
@@ -250,19 +295,18 @@ queryBuilder()
 									deletePending = 1
 									while (deletePending = 1)
 									{
-										Send {Click 1333, 609}
-										Sleep 50
-										PixelGetColor, deleteStatus, 439, 608
+										;Send {Click 1333, 609} xxx
+										;Sleep 100 xxx
+										PixelGetColor, deleteStatus, 445, 827
 										if (deleteStatus == "0x727272")
 										{
-											Send {Click 445, 615} 		; Click delete button
+											Send {Click 445, 834} 		; Click delete button
 											Sleep 200
-											Send {Click 796, 486} 		; Confirm deletion
+											Send {Enter} 		 		; Confirm deletion
 											Sleep 500
 										}
 										else
 										{
-											Send {Click 1333, 308}		; Move scroll bar up
 											Send {Click 471, 403}		; Click on the second row of the KG if something exists
 											PixelGetColor, deleteStatus2, 471, 403
 											if (deleteStatus2 == "0xFFFFFF")
@@ -292,7 +336,10 @@ queryBuilder()
 							else if (A_LoopField == "D")
 								commandContainer := "Delete"
 							else if (A_LoopField == "C")
+							{
+								concatCount++
 								commandContainer := "Concat"
+							}
 							else
 							{
 								logStatus("E", "QueryBuilder", "Unknown command found under [Command Container]")
@@ -307,9 +354,9 @@ queryBuilder()
 
 							if (commandContainer == "Add")
 							{
-								Sleep 50
+								Sleep 100
 								Send {Click 534, 534} 					; Click "Add" button
-								Sleep 50
+								Sleep 125
 								Send %A_LoopField%						; Enter the name of the Keyword Group
 							}
 							else if (commandContainer == "Delete")
@@ -333,9 +380,9 @@ queryBuilder()
 							}
 							else if (commandContainer == "Concat")
 							{
-								Sleep 50
+								Sleep 125
 								Send {Enter} 							; Press ENTER key
-								Sleep 50
+								Sleep 125
 								Send %A_LoopField%						; Enter the name of the Keyword Group
 							}
 						}
@@ -345,7 +392,7 @@ queryBuilder()
 							keywordStep = 0
 							if (A_LoopField != "")
 							{
-								setProximity(A_LoopField, commandContainer)
+								setProximity(A_LoopField, commandContainer, concatCount)
 							}
 						}
 					}
@@ -370,9 +417,9 @@ queryBuilder()
 						{
 							if (commandContainer == "Add")
 							{
-								Send {Click 535, 469} 					; Click "Add" button
+								Send {Click 534, 687} 					; Click "Add" button
 								Send %A_LoopField%						; Enter the name of the Keyword Group
-								Send {Click 979, 500} 					; Click "Done" button
+								Send {Click 1132, 640} 					; Click "Done" button
 
 								; Wait until screen is finished loading
 								addStatus := ""
@@ -389,9 +436,9 @@ queryBuilder()
 									deletePending := ""
 									while (deletePending != "0xFFFFFF")
 									{
-										Send {Click 779, 468} 			; Click "Delete" button
-										Send {Click 941, 373} 			; Click the topmost row
-										PixelGetColor, deletePending, 940, 374
+										Send {Click 779, 687} 			; Click "Delete" button
+										Send {Click 938, 594} 			; Click the topmost row
+										PixelGetColor, deletePending, 938, 594
 									}
 								}
 								else 
@@ -425,9 +472,9 @@ queryBuilder()
 							if (commandContainer == "Add")
 							{
 								;MsgBox "Name" is %A_LoopField% on Keyword Group will be added
-								Send {Click 535, 621} 					; Click "Add" button
+								Send {Click 535, 841} 					; Click "Add" button
 								Send %A_LoopField%						; Enter the name of the Keyword Group
-								Send {Click 979, 500} 					; Click "Done" button
+								Send {Click 1135, 639} 					; Click "Done" button
 
 								; Wait until screen is finished loading
 								addStatus := ""
@@ -444,9 +491,9 @@ queryBuilder()
 									deletePending := ""
 									while (deletePending != "0xFFFFFF")
 									{
-										Send {Click 779, 620} 			; Click "Delete" button
-										Send {Click 941, 526} 			; Click the topmost row
-										PixelGetColor, deletePending, 940, 526
+										Send {Click 779, 838} 			; Click "Delete" button
+										Send {Click 938, 745} 			; Click the topmost row
+										PixelGetColor, deletePending, 938, 745
 									}
 								}
 								else 
@@ -463,7 +510,7 @@ queryBuilder()
 
 			if (categoryContainer == "K1" && (commandContainer == "Add" || commandContainer == "Concat"))
 			{
-				Send {Click 1120, 660} 									; Click "Done" button
+				Send {Click 1279, 787} 									; Click "Done" button
 			}
 		}
 		if (errorFlag == 0)
@@ -668,17 +715,23 @@ logStatus(statusType, scriptType, errorMessage)
 ; ; Debugging code
 ; ;-------------------------------------------------------------------------
 ; ; The following CTRL + ALT + LeftClick returns the cursor position and pixel color
-; ^!LButton::
-; 	MouseGetPos, xpos, ypos 
-; 	PixelGetColor, buttonColor, xpos, ypos 
-; 	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
-; return
+^!LButton::
+	MouseGetPos, xpos, ypos 
+	PixelGetColor, buttonColor, xpos, ypos 
+	Msgbox, The cursor is at X:%xpos% Y:%ypos% Color:%buttonColor%. 
+return
 
 ; ;550, 473
 ; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
 ; ;-------------------------------------------------------------------------
-; ^!m::
-; PixelGetColor, xxyyzz, 832, 430
-; PixelGetColor, xxyyzz2, 832, 429
-; Msgbox, Color is "%xxyyzz%" at 832, 430
-; Msgbox, Color is "%xxyyzz2%" at 832, 429
+^!m::
+; PixelGetColor, xxyyzz, 445, 827
+; PixelGetColor, xxyyzz2, 445, 828
+; PixelGetColor, xxyyzz3, 445, 829
+; PixelGetColor, xxyyzz4, 445, 826
+; Msgbox, Color is "%xxyyzz%" at 445, 827
+; Msgbox, Color is "%xxyyzz2%" at 445, 828
+; Msgbox, Color is "%xxyyzz3%" at 445, 829
+; Msgbox, Color is "%xxyyzz4%" at 445, 826
+;MouseMove, 1280, 348
+return
