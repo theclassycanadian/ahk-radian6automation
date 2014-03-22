@@ -6,7 +6,7 @@ KG|A|Keyword Group 1
 KG|A|Keyword Group 2
 KG|A|Keyword Group 3
 K1|A|single keyword 3|3
-K1|A|keyword Prox 4|4|C|asdasdasd|4|C|Yet Another word Prox 4|4
+K1|A|keyword Prox 4|1|C|asdasdasd|4|C|Yet Another word Prox 4|2|C|Yet Another word Prox 42|3|C|Yet Another word Prox 45|4|C|Yet Another word Prox 49|5|C|Yet Another word Prox 44|6|C|Yet Another word Prox 50x|7|C|Yet Another word Prox avf|8|C|Yet Another word Prox asdzx|9|C|Yet Another word Prox vvv|10|C|Yet Another word Prox bfg|11|C|Yet Another word Prox asdasd|12|C|Yet Another word Prox xsw|13|C|Yet Another word Prox asdasdww|14|C|Yet Another word Prox adb|15|C|Yet Another word Prox android|16|C|Yet Another word Prox 123a|17|C|Yet Another word Prox maa|18|C|Yet Another word Prox helloworld|19|C|Yet Another word Prox blaherg|20|C|Yet Another word Prox blaherg|1|C|Yet Another word Prox asdzxc|2|C|Yet Another word Prox dgfvcvb|3
 K1|A|single keyword 4|4
 K1|A|keyword Prox 5|5|C|another Prox 5|5|C|Yet Another word Prox 5|5
 K1|A|single keyword 5|5
