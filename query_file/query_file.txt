@@ -2,130 +2,181 @@ KG|D|All
 KX|D|All
 K2|D|All
 K1|D|All
-KG|A|Keyword Group 1
-KG|A|Keyword Group 2
-KG|A|Keyword Group 3
-K1|A|single keyword 3|3
-K1|A|keyword Prox 4|4|C|asdasdasd|4|C|Yet Another word Prox 4|4
-K1|A|single keyword 4|4
-K1|A|keyword Prox 5|5|C|another Prox 5|5|C|Yet Another word Prox 5|5
-K1|A|single keyword 5|5
-K1|A|keyword Prox 6|6|C|another Prox 6|6|C|Yet Another word Prox 6|6
-K1|A|single keyword 6|6
-K1|A|keyword Prox 7|7|C|another Prox 7|7|C|Yet Another word Prox 7|7
-K1|A|single keyword 7|7
-KX|A|Second keyword noncontain 1
-KX|A|Second keyword noncontain 2
-KX|A|Second keyword noncontain 3
-KX|A|Second keyword noncontain 4
-KX|A|Second keyword noncontain 5
-KX|A|Second keyword noncontain 6
-KX|A|Second keyword noncontain 7
-KX|A|Second keyword noncontain 8
-KX|A|Second keyword noncontain 9
-KX|A|Second keyword noncontain 10
-KX|A|Second keyword noncontain 11
-KX|A|Second keyword noncontain 12
-KX|A|Second keyword noncontain 13
-KX|A|Second keyword noncontain 14
-KG|A|Keyword Group 4
-K1|A|keyword Prox 8|8|C|another Prox 8|8|C|Yet Another word Prox 8|8
-K1|A|single keyword 8|8
-K1|A|keyword Prox 9|9|C|another Prox 9|9|C|Yet Another word Prox 9|9
-K1|A|single keyword 9|9
-K1|A|keyword Prox 10|10|C|another Prox 10|10|C|Yet Another word Prox 10|10
-K1|A|single keyword 10|10
-K1|A|keyword Prox 11|11|C|another Prox 11|11|C|Yet Another word Prox 11|11
-K1|A|single keyword 11|11
-K1|A|keyword Prox 12|12|C|another Prox 12|12|C|Yet Another word Prox 12|12
-K1|A|single keyword 12|12
-K1|A|keyword Prox 13|13|C|another Prox 13|13|C|Yet Another word Prox 13|13
-K1|A|single keyword 13|13
-K2|A|Second keyword 9
-K2|A|Second keyword 10
-K2|A|Second keyword 11
-K2|A|Second keyword 12
-K2|A|Second keyword 13
-K2|A|Second keyword 14
-K2|A|Second keyword 15
-K2|A|Second keyword 16
-K2|A|Second keyword 17
-K2|A|Second keyword 18
-K2|A|Second keyword 19
-K2|A|Second keyword 20
-K2|A|Second keyword 21
-K2|A|Second keyword 22
-KX|A|Second keyword noncontain 15
-KX|A|Second keyword noncontain 16
-KX|A|Second keyword noncontain 17
-KX|A|Second keyword noncontain 18
-KG|A|Keyword Group 5
-KG|A|Keyword Group 6
-KG|A|Keyword Group 7
-KG|A|Keyword Group 8
-KG|A|Keyword Group 9
-K1|A|keyword no prox||C|another no prox||C|yet another with no prox|
-K1|A|single keyword 0|
-K1|A|keyword Prox 1|1|C|another Prox 1|1|C|Yet Another word Prox 1|1
-K1|A|single keyword 1|1
-K1|A|keyword Prox 2|2|C|another Prox 2|2|C|Yet Another word Prox 2|2
-K1|A|single keyword 2|2
-K1|A|keyword Prox 3|3|C|another Prox 3|3|C|Yet Another word Prox 3|3
-K2|A|Second keyword 1
-K2|A|Second keyword 2
-K2|A|Second keyword 3
-K2|A|Second keyword 4
-K2|A|Second keyword 5
-K2|A|Second keyword 6
-K2|A|Second keyword 7
-K2|A|Second keyword 8
-KX|A|Second keyword noncontain 19
-KX|A|Second keyword noncontain 20
-KX|A|Second keyword noncontain 21
-KX|A|Second keyword noncontain 22
-KX|A|Second keyword noncontain 23
-KX|A|Second keyword noncontain 24
-KX|A|Second keyword noncontain 25
-KX|A|Second keyword noncontain 26
-KX|A|Second keyword noncontain 27
-KG|A|Keyword Group 11
-KG|A|Keyword Group 21
-KG|A|Keyword Group 31
-KG|A|Keyword Group 41
-KG|A|Keyword Group 51
-KG|A|Keyword Group 61
-KG|A|Keyword Group 71
-KG|A|Keyword Group 81
-KG|A|Keyword Group 91
-KG|A|Keyword Group 12
-KG|A|Keyword Group 22
-KG|A|Keyword Group 32
-KG|A|Keyword Group 42
-KG|A|Keyword Group 52
-K1|A|keyword Prox 14|14|C|another Prox 14|14|C|Yet Another word Prox 14|14
-K1|A|single keyword 14|14
-K1|A|keyword Prox 15|15|C|another Prox 15|15|C|Yet Another word Prox 15|15
-K1|A|single keyword 15|15
-K1|A|keyword Prox 16|16|C|another Prox 16|16|C|Yet Another word Prox 16|16
-K1|A|single keyword 16|16
-K1|A|keyword Prox 17|17|C|another Prox 17|17|C|Yet Another word Prox 17|17
-K1|A|single keyword 17|17
-KG|A|Keyword Group 62
-K1|A|keyword Prox 18|18|C|another Prox 18|18|C|Yet Another word Prox 18|18
-K1|A|single keyword 18|18
-K1|A|keyword Prox 19|19|C|another Prox 19|19|C|Yet Another word Prox 19|19
-K1|A|single keyword 19|19
-KG|A|Keyword Group 72
-KG|A|Keyword Group 82
-K1|A|keyword Prox 20|20|C|another Prox 20|20|C|Yet Another word Prox 20|20
-K1|A|single keyword 20|20
-K2|A|Second keyword 23
-K2|A|Second keyword 24
-K2|A|Second keyword 25
-K2|A|Second keyword 26
-K2|A|Second keyword 27
-KG|A|Keyword Group 92
-KG|D|All
-KX|D|All
-K2|D|All
-K1|D|All
+KG|A|generic harry potter universal as qualifier
+K1|A|butter beer|
+K1|A|butterbeer|
+K1|A|diagon alley|
+K1|A|diagonalley|
+K1|A|dragon challenge|
+K1|A|forbidden journey|
+K1|A|harry potter|
+K1|A|hogsmade|
+K1|A|hogwarts|
+K1|A|olivanders|
+K1|A|potter land|
+K1|A|potter world|
+K1|A|potterworld|
+K1|A|three broomsticks|
+K1|A|wizarding world|
+K1|A|wwohp|
+K1|A|zonko|
+K1|A|zonkos|
+K1|A|triwizard tournament|
+K2|A|florida,orlando,universal,wizarding, wwohp
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
+KG|A|generic terms universal as qualifier
+K1|A|amusement park|
+K1|A|annual pass|
+K1|A|barney show|
+K1|A|beetlejuice|
+K1|A|blue man group|
+K1|A|bluemangroup|
+K1|A|bubba gump|
+K1|A|character breakfast|
+K1|A|christmas parade|
+K1|A|city walk|
+K1|A|citywalk|
+K1|A|day in the park with barney|
+K1|A|disaster ride|
+K1|A|dr suess|
+K1|A|express pass|
+K1|A|fast food boulevard|
+K1|A|grad bash|
+K1|A|grinchmas|
+K1|A|halloween|
+K1|A|holiday parade|
+K1|A|hulk|
+K1|A|IOA|
+K1|A|jaws|
+K1|A|krusty|
+K1|A|kwik e mart|
+K1|A|macy's parade|
+K1|A|mardi gras|
+K1|A|mardigras|
+K1|A|men in black|
+K1|A|minion ride|
+K1|A|moe|
+K1|A|mummy|
+K1|A|real_liam_payne|
+K1|A|rip ride rockit|
+K1|A|ripsaw falls|
+K1|A|rock universe|
+K1|A|rockit|
+K1|A|royal pacific|
+K1|A|seuss landing|
+K1|A|shrek|
+K1|A|simpsons|
+K1|A|spiderman|
+K1|A|springfield|
+K1|A|tchoup chop|
+K1|A|walking dead|
+K1|A|kidzone|
+K1|A|Hard Rock Café|
+K2|A|florida,orlando,universal
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
+KG|A|Major Specific
+K1|A|bubba gump city walk|6
+K1|A|bubba gump citywalk|6
+K1|A|butter beer universal|4
+K1|A|butterbeer universal|3
+K1|A|citywalk|
+K1|A|cletus chicken shack|
+K1|A|day in the park with barney|
+K1|A|diagon alley universal|10
+K1|A|forbidden journey|
+K1|A|gradventure|
+K1|A|halloween horror night|
+K1|A|halloween horror nights|
+K1|A|halloween universal|10
+K1|A|halloweenhorrornights|
+K1|A|HARRY POTTER RIDE|
+K1|A|harry potter universal|10
+K1|A|Harry Potter World|
+K1|A|hhn|
+K1|A|horrornightsorl|
+K1|A|hulk universal|20
+K1|A|island of adventure|
+K1|A|island of adventures|
+K1|A|islands of adventure|
+K1|A|islandsofadventure|
+K1|A|jurassic universal|20
+K1|A|marvel super hero island|
+K1|A|marvel superhero island|
+K1|A|minion ride universal|20
+K1|A|nba citywalk|
+K1|A|ride at universal|
+K1|A|ripsaw universal|
+K1|A|rising star city walk|
+K1|A|rock the universe|
+K1|A|rockit universal|20
+K1|A|shrek 4d|
+K1|A|shrek universal|20
+K1|A|silent hill|
+K1|A|tickets universal|
+K1|A|twirl n hurl|
+K1|A|Universal Coaster|20
+K1|A|universal florida|7
+K1|A|universal harry potter|10
+K1|A|universal orlando|
+K1|A|universal orlando|3
+K1|A|universal parade|4
+K1|A|universal pass|3
+K1|A|universal passes|3
+K1|A|universal ride|20
+K1|A|universal springfield|10
+K1|A|Universal Studio|
+K1|A|universal studios|
+K1|A|universal theme park|
+K1|A|universal today|
+K1|A|universal tomorrow|
+K1|A|universal tonight|
+K1|A|UniversalORL|
+K1|A|UniversalOrlando|
+K1|A|universalstudios|
+K1|A|UORHHN|
+K1|A|wizarding world|
+K1|A|WORLD OF HARRY POTTER|
+K1|A|wwohp|
+K1|A|Simpsons theme Park|10
+K1|A|Krusty Burger|
+K1|A|Moe Tavern|
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
+KG|A|No Exclusions
+K1|A|hollywood studios||C|universal orlando|
+K1|A|Universal Orlando||C|Hollywood|
+KG|A|Ride and Coaster
+K1|A|despicable me|
+K1|A|dragon challenge|
+K1|A|dueling dragons|
+K1|A|hulk|
+K1|A|islandsofadventure|
+K1|A|jaws|
+K1|A|jurrasic park|
+K1|A|king kong|
+K1|A|kodos|
+K1|A|men in black|
+K1|A|mummy|
+K1|A|rockit|
+K1|A|shrek|
+K1|A|simpsons|
+K1|A|spider man|
+K1|A|spiderman|
+K1|A|transformers|
+K1|A|twister|
+K1|A|Universal|
+K2|A|coaster, ride
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
+KG|A|specific terms potter
+K1|A|diagon alley expansion|
+K1|A|Flight of The Hippogriff|
+K1|A|harry potter land|
+K1|A|potter theme park|
+K1|A|The three broomsticks|
+K1|A|wizarding world of harry|
+K1|A|wizardingworldofharrypotter|
+K1|A|wwohp|
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
+KG|A|universal with competitors  as quilifiers
+K1|A|Universal|
+K2|A|Busch Gardens, Disney, Magic Kingdom, Epcot, Seaworld, WDW
+KX|A|AMAZON, BOX OFFICE, CALIFORNIA, DVD, HOLLYWOOD, IDC, LEAVESDEN, OSAKA, SENTOSA, SINGAPORE, WATCH MOVIE, XBOX, JAPAN, LONDON, LOS ANGELES
