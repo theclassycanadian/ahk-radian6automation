@@ -608,7 +608,7 @@ ReportAutoDownload()
 			Loop
 			{
 				; Check if button color is disabled or enabled
-				WinActivate, Radian6 Dashboard
+				Sleep 5000
 				PixelGetColor, buttonCol, 758, 594
 				
 
@@ -626,6 +626,7 @@ ReportAutoDownload()
 							
 							if (pixCol = "0xFFFFFF")
 							{
+								WinActivate, Radian6 Dashboard
 								Sleep 1000
 							}
 							else if (pixCol = "0x252525")
@@ -648,7 +649,7 @@ ReportAutoDownload()
 								
 							if (pixCol = "0xF3F3F3")
 							{
-								Sleep 1000
+								Sleep 5000
 							}
 							else if (pixCol = "0x3E7EFF")
 							{
@@ -664,12 +665,29 @@ ReportAutoDownload()
 				}
 			}
 		}
+		moveFile()
 		logStatus("C", "ReportAutoDownload", "")
 	}
 	else
 	{
 		logStatus("E", "ReportAutoDownload", "Radian6 Dashbord not found")
 		return
+	}
+}
+
+moveFile()
+{
+	FileRead, filePathMove, config.txt
+
+	; Check if file exist and is not empty
+	if not ErrorLevel and filePathMove != "" 
+	{
+		Loop, C:\Users\afine\Desktop\*.csv
+		{
+			FileMove, %A_LoopFileFullPath%, %filePathMove%
+		}
+		; Free memory assigned to filePathMove
+		filePathMove =
 	}
 }
 
@@ -704,16 +722,17 @@ logStatus(statusType, scriptType, errorMessage)
 ; ; ;550, 473
 ; ; ;PixelGetColor, OutputVar, X, Y [, Alt|Slow|RGB] 
 ; ; ;-------------------------------------------------------------------------
-; ^!m::
-; ; PixelGetColor, xxyyzz, 987, 574
+^!m::
+; PixelGetColor, xxyyzz, 758, 594
 ; ; PixelGetColor, xxyyzz2, 758, 594
 ; ; PixelGetColor, xxyyzz3, 758, 595
 ; ; PixelGetColor, xxyyzz4, 758, 596
-; ; Msgbox, Color is "%xxyyzz%" at 987, 574
+; Msgbox, Color is "%xxyyzz%" at 758, 594
 ; ; Msgbox, Color is "%xxyyzz2%" at 758, 594
 ; ; Msgbox, Color is "%xxyyzz3%" at 758, 595
 ; ; Msgbox, Color is "%xxyyzz4%" at 758, 596
 ; ; MouseMove, 55, 140
+; ; MouseMove, 673, 350
 ; ; Sleep 1000
 ; ; MouseMove, 522, 368
-; return
+return
